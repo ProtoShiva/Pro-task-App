@@ -9,7 +9,7 @@ import SettingsPage from "./pages/SettingsPage/SettingsPage"
 import { UserContextProvider } from "./context/UserContext"
 import Layout from "./layout/Layout.jsx"
 import SharePage from "./pages/SharePage/SharePage.jsx"
-axios.defaults.baseURL = "http://localhost:3000/api"
+axios.defaults.baseURL = "https://pro-task-app-api.vercel.app"
 axios.defaults.withCredentials = true
 const App = () => {
   return (

@@ -14,7 +14,7 @@ app.use(express.json())
 app.use(cookieParser())
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://pro-task-app-api.vercel.app",
     methods: ["POST", "GET"],
     credentials: true
   })
