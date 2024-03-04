@@ -1,0 +1,121 @@
+.container {
+  display: flex;
+}
+
+.image_div {
+  background-color: #17a2b8;
+  width: 60vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.image_div h1 {
+  color: #fff;
+  position: relative;
+  top: -60px;
+}
+
+.image_div p {
+  color: #fff;
+  position: relative;
+  top: -50px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5rem;
+  gap: 16px;
+}
+
+.formContainer {
+  width: 60%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+.formContainer h2 {
+  font-size: 33px;
+  font-weight: 600;
+  margin: 0 auto;
+  color: #343434;
+}
+.form_div {
+  width: 40vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inputField {
+  display: flex;
+  align-items: center;
+  border: 1px solid gray;
+  height: 2.5rem;
+  border-radius: 9px;
+  gap: 14px;
+  width: 100%;
+}
+
+.mainInput {
+  border: none;
+  outline: none;
+  height: 100%;
+  font-size: 1.15rem;
+  color: #828282;
+  font-weight: 500;
+  width: 75%;
+}
+
+.icons {
+  margin-left: 8px;
+  color: #828282;
+  font-size: 1.25rem;
+}
+
+.passIcons {
+  margin-left: auto;
+  margin-right: 4px;
+  color: #828282;
+  font-size: 1.25rem;
+}
+
+#regBtn {
+  background-color: #17a2b8;
+  height: 2.5rem;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 1.25rem;
+  margin-top: 50px;
+  border: none;
+}
+
+.bottomInput {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.bottomInput p {
+  color: gray;
+  font-size: 1.15rem;
+}
+
+.bottom_log {
+  border: 1px solid #17a2b8;
+  width: 100%;
+  border-radius: 20px;
+  height: 2.5rem;
+  text-align: center;
+  padding-top: 10px;
+  text-decoration: none;
+  color: #17a2b8;
+  margin-top: 16px;
+}

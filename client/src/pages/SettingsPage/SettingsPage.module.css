@@ -1,0 +1,71 @@
+.container {
+  display: flex;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5rem;
+  gap: 16px;
+}
+
+.formContainer {
+  width: 30%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+.formContainer h2 {
+  font-size: 33px;
+  font-weight: 600;
+  margin-top: 30px;
+  color: #343434;
+}
+.form_div {
+  width: 85vw;
+  height: 100vh;
+}
+
+.inputField {
+  display: flex;
+  align-items: center;
+  border: 1px solid gray;
+  height: 2.5rem;
+  border-radius: 9px;
+  gap: 14px;
+  width: 100%;
+}
+
+.mainInput {
+  border: none;
+  outline: none;
+  height: 100%;
+  font-size: 1.15rem;
+  color: #828282;
+  font-weight: 500;
+  width: 75%;
+}
+
+.icons {
+  margin-left: 8px;
+  color: #828282;
+  font-size: 1.25rem;
+}
+
+.passIcons {
+  margin-left: auto;
+  margin-right: 4px;
+  color: #828282;
+  font-size: 1.25rem;
+}
+
+#regBtn {
+  background-color: #17a2b8;
+  height: 2.5rem;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 1.25rem;
+  margin-top: 50px;
+  border: none;
+}

@@ -1,0 +1,31 @@
+.board {
+  min-width: 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: auto;
+  background-color: #eef2f5;
+  border-radius: 15px;
+}
+
+.top {
+  display: flex;
+  padding: 22px;
+}
+
+.title {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+}
+
+.cards {
+  overflow-y: auto;
+  height: 100%;
+}
+
+#collapse {
+  margin-left: 12px;
+  color: #767575;
+}

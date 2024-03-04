@@ -1,0 +1,152 @@
+.card {
+  padding: 10px;
+  border-radius: 15px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-left: 15px;
+  margin-right: 5px;
+  margin-bottom: 10px;
+}
+
+.card_top {
+  display: flex;
+  gap: 5px;
+  position: relative;
+}
+
+.card_lables {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.card_title {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.dropdown {
+  width: 100%;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  border: none;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+#arrow {
+  background-color: #eeecec;
+  color: #767575;
+  height: 24px;
+  width: 24px;
+  border-radius: 5px;
+  margin-top: -4px;
+}
+
+.dropdownItems {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px;
+}
+.items {
+  display: flex;
+  gap: 8px;
+  border: 1px solid #e2e2e2;
+  border-radius: 15px;
+  padding: 6px;
+  line-height: normal;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+#prior {
+  display: flex;
+  gap: 3px;
+}
+
+#prior > p {
+  font-size: 8px;
+  color: #707070;
+  padding-top: 2.5px;
+}
+
+.card_footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.date {
+  width: 53px;
+  height: 22px;
+  font-size: 8px;
+  font-weight: 500;
+  border-radius: 8px;
+  background-color: #dbdbdb;
+  text-align: center;
+  padding-top: 5px;
+  cursor: pointer;
+}
+
+.overdue {
+  background-color: #cf3636;
+  color: white;
+}
+.doneCol {
+  background-color: #63c05b;
+  color: #fff;
+}
+.card_tab {
+  display: flex;
+  gap: 8px;
+  font-size: 8px;
+  color: #767575;
+  font-weight: 600;
+}
+
+.card_tab div {
+  border-radius: 5px;
+  background-color: #eeecec;
+  text-align: center;
+  padding: 4px;
+  cursor: pointer;
+}
+
+.popup_inner {
+  background-color: #fff;
+  max-width: 150px;
+  height: 120px;
+  padding: 22px;
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+  position: absolute;
+  z-index: 9999;
+  right: -3%;
+  top: 50%;
+  cursor: pointer;
+}
+
+.highPriority {
+  color: #ff2473;
+}
+
+.mediumPriority {
+  color: #18b0ff;
+}
+
+.lowPriority {
+  color: #63c05b;
+}
+
+.threeDot {
+  padding-top: 5px;
+  cursor: pointer;
+}
+
+.del {
+  color: #cf3636;
+}
