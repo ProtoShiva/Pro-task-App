@@ -1,5 +1,5 @@
 import express from "express"
-import connectDB from "./Database/db.js"
+import connectDB from "./db/db.js"
 import cookieParser from "cookie-parser"
 import cors from "cors"
 import bcrypt from "bcrypt"
