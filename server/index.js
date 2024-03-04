@@ -1,5 +1,5 @@
 import express from "express"
-import mongoose from "mongoose"
+import connectDB from "./Database/db.js"
 import cookieParser from "cookie-parser"
 import cors from "cors"
 import bcrypt from "bcrypt"
@@ -22,7 +22,6 @@ app.use(
 const bcryptSalt = bcrypt.genSaltSync(10)
 
 app.post("/api/register", async (req, res) => {
-  mongoose.connect(process.env.MONGODB_URI)
   const { name, email, password } = req.body
   try {
     const userDoc = await User.create({
@@ -37,7 +36,6 @@ app.post("/api/register", async (req, res) => {
 })
 
 app.post("/api/login", async (req, res) => {
-  mongoose.connect(process.env.MONGODB_URI)
   const { email, password } = req.body
   const userDoc = await User.findOne({ email })
   if (userDoc) {
@@ -61,7 +59,6 @@ app.post("/api/login", async (req, res) => {
 })
 
 app.get("/api/profile", (req, res) => {
-  mongoose.connect(process.env.MONGODB_URI)
   const { jwtToken } = req.cookies
   if (jwtToken) {
     jwt.verify(jwtToken, process.env.jwtSecret, {}, async (err, userData) => {
@@ -77,7 +74,6 @@ app.post("/api/logout", (req, res) => {
 })
 
 app.post("/api/newcards", (req, res) => {
-  mongoose.connect(process.env.MONGODB_URI)
   const { jwtToken } = req.cookies
   const { title, priority, duedate, inputs, checked } = req.body
   jwt.verify(jwtToken, process.env.jwtSecret, {}, async (err, userData) => {
@@ -95,7 +91,6 @@ app.post("/api/newcards", (req, res) => {
 })
 
 app.get("/api/cards", (req, res) => {
-  mongoose.connect(process.env.MONGODB_URI)
   const { jwtToken } = req.cookies
   if (jwtToken) {
     jwt.verify(jwtToken, process.env.jwtSecret, {}, async (err, userData) => {
@@ -118,12 +113,10 @@ app.get("/api/sortedcard/:", async (req, res) => {
 })
 
 app.get("/api/cards/:id", async (req, res) => {
-  mongoose.connect(process.env.MONGODB_URI)
   const { id } = req.params
   res.json(await Check.findById(id))
 })
 app.put("/api/card/:id", async (req, res) => {
-  mongoose.connect(process.env.MONGODB_URI)
   const { jwtToken } = req.cookies
   const { id } = req.params
   const { title, priority, duedate, inputs } = req.body
@@ -165,7 +158,6 @@ app.put("/api/card/:id", async (req, res) => {
 })
 
 app.put("/api/status/:id", async (req, res) => {
-  mongoose.connect(process.env.MONGODB_URI)
   const { jwtToken } = req.cookies
   const { id } = req.params
   const { status } = req.body
@@ -205,7 +197,6 @@ app.put("/api/status/:id", async (req, res) => {
 })
 
 app.put("/api/userchange/:id", async (req, res) => {
-  mongoose.connect(process.env.MONGODB_URI)
   const { name, password } = req.body
   const { id } = req.params
   const user = await User.findById(id)
@@ -224,7 +215,6 @@ app.put("/api/userchange/:id", async (req, res) => {
   }
 })
 app.delete("/api/user_cards/:id", async (req, res) => {
-  mongoose.connect(process.env.MONGODB_URI)
   const { id } = req.params
   try {
     const result = await Check.findByIdAndDelete(id)
